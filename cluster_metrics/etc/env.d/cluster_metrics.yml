@@ -7,6 +7,14 @@ component_skel:
 container_skel:
   cluster-metrics_container:
     belongs_to:
-      - log_containers
+      - cluster-metrics_containers
     contains:
       - cluster-metrics
+
+physical_skel:
+  cluster-metrics_containers:
+    belongs_to:
+      - all_containers
+  cluster-metrics_hosts:
+    belongs_to:
+      - hosts
